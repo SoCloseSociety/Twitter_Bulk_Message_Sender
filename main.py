@@ -82,7 +82,7 @@ def write_category(category, driver, wordpress_link, current_title):
 
 
 def main():
-    # profile_file_name = input("Output file  name  without (.csv) = ")
+    profile_file_name = input("Input file  name  with .csv = ")
     # Open the file in read mode ('r')
     with open('message.txt', 'r', encoding='utf-8') as file:
         # Read the contents of the file
@@ -102,7 +102,7 @@ def main():
 
     if my_input == 'S':
       # Load the CSV file into a pandas DataFrame
-      df = pd.read_csv('Test.csv')
+      df = pd.read_csv(profile_file_name)
       base_url = 'https://twitter.com'
 
       # Iterate over each row in the DataFrame
